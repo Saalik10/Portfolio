@@ -1,0 +1,433 @@
+<!--
+Multi-page Website Template for: Saalik Waseem
+Files included in this single document (copy each to its own file):
+ - index.html
+ - about.html
+ - services.html
+ - contact.html
+ - assets/js/main.js
+ - README.md
+
+Instructions: copy each section below into separate files with the filenames shown.
+This template uses Tailwind CDN for styling so you don't need to build a toolchain.
+-->
+
+<!-- ========================= index.html ========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saalik Waseem — Professional | #8thDimension</title>
+  <meta name="description" content="Saalik Waseem — Contact, Services & Portfolio. Modern multi-page template built with Tailwind CSS." />
+
+  <!-- Tailwind CDN (quick start) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind custom colors/config (easy to change)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9', // change primary here
+            accent: '#7c3aed'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom tiny animation styles -->
+  <style>
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in-up { animation: fadeInUp 0.7s ease forwards; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <!-- Simple logo (replace with your own) -->
+          <div class="p-2 rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold">SW</div>
+          <div>
+            <div class="text-lg font-semibold">Saalik Waseem</div>
+            <div class="text-xs text-gray-500">Professional — Contact & Services</div>
+          </div>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="hover:text-primary transition">Home</a>
+          <a href="about.html" class="hover:text-primary transition">About</a>
+          <a href="services.html" class="hover:text-primary transition">Services</a>
+          <a href="contact.html" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobileBtn" aria-label="Open menu" class="p-2 rounded-md bg-gray-100">
+            <svg id="mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="mobileClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden on desktop) -->
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="index.html" class="py-2">Home</a>
+        <a href="about.html" class="py-2">About</a>
+        <a href="services.html" class="py-2">Services</a>
+        <a href="contact.html" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6">
+    <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 py-12">
+      <div class="space-y-6">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Hi, I'm <span class="text-primary">Saalik Waseem</span></h1>
+        <p class="text-lg text-gray-600">I build beautiful, high-performing websites and templates that are easy to customize. Reach out for freelance work or to purchase a ready-made template.</p>
+
+        <div class="flex items-center gap-4">
+          <a href="contact.html" class="inline-block bg-primary text-white px-6 py-3 rounded-md font-medium shadow hover:shadow-lg transition transform hover:-translate-y-1">Contact Me</a>
+          <a href="services.html" class="inline-block border border-gray-200 px-5 py-3 rounded-md hover:bg-gray-100 transition">See Services</a>
+        </div>
+
+        <div class="mt-4 text-sm text-gray-500">Phone: <a href="tel:9942104752" class="text-primary">9942104752</a> · Email: <a href="mailto:saalikwaseem8@gmail.com" class="text-primary">saalikwaseem8@gmail.com</a></div>
+      </div>
+
+      <!-- Right column: decorative card / image -->
+      <div class="fade-in-up">
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <!-- Replace this placeholder with your own image in assets/images/ -->
+          <div class="h-64 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-bold">Saalik</div>
+
+          <div class="mt-5">
+            <h3 class="font-semibold text-lg">Quick pitch</h3>
+            <p class="text-gray-600 mt-2">Sell-ready templates, fast delivery, clean code, and clear documentation so buyers can customize easily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features preview -->
+    <section class="py-8">
+      <h2 class="text-2xl font-bold mb-6">What I offer</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+          <h4 class="font-semibold">Custom Websites</h4>
+          <p class="text-sm text-gray-600 mt-2">Built with modern tools, responsive, and optimized for performance.</p>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+          <h4 class="font-semibold">Sellable Templates</h4>
+          <p class="text-sm text-gray-600 mt-2">Templates are reusable and documented so buyers can customize them easily.</p>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+          <h4 class="font-semibold">Support & Docs</h4>
+          <p class="text-sm text-gray-600 mt-2">I provide setup help and simple documentation for each template.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials / CTA -->
+    <section class="py-8">
+      <div class="bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-lg">
+        <h3 class="text-xl font-semibold">Ready to start?</h3>
+        <p class="text-gray-600 mt-2">Contact me for a custom quote or to buy a ready-made template.</p>
+        <div class="mt-4">
+          <a href="contact.html" class="inline-block bg-accent text-white px-6 py-3 rounded-md">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-sm text-gray-500">© <span id="year">2025</span> Saalik Waseem — All rights reserved.</div>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="mailto:saalikwaseem8@gmail.com" class="hover:text-primary">saalikwaseem8@gmail.com</a>
+        <a href="tel:9942104752" class="hover:text-primary">9942104752</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- ========================= about.html ========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Saalik Waseem | #8thDimension</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#0ea5e9', accent: '#7c3aed' } } } };
+  </script>
+  <style>
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in-up { animation: fadeInUp 0.7s ease forwards; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Reuse: header nav same as index (for brevity copy header code from index.html) -->
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="p-2 rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold">SW</div>
+          <div>
+            <div class="text-lg font-semibold">Saalik Waseem</div>
+            <div class="text-xs text-gray-500">Professional — Contact & Services</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="hover:text-primary transition">Home</a>
+          <a href="about.html" class="hover:text-primary transition">About</a>
+          <a href="services.html" class="hover:text-primary transition">Services</a>
+          <a href="contact.html" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="mobileBtn2" aria-label="Open menu" class="p-2 rounded-md bg-gray-100">Menu</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <h1 class="text-3xl font-bold">About Me</h1>
+        <p class="mt-4 text-gray-600">Hello — I'm <strong>Saalik Waseem</strong>. I create polished websites and sell templates that are easy to customize. My focus is clean code, fast performance, and clear documentation so my buyers can edit without hassle.</p>
+
+        <h3 class="mt-6 font-semibold">Background</h3>
+        <p class="text-gray-600 mt-2">I started building websites to share my projects and help small businesses have an online presence. I enjoy UI design, small animations, and packaging websites so others can buy them and launch quickly.</p>
+
+        <h3 class="mt-6 font-semibold">Process</h3>
+        <ol class="list-decimal ml-5 mt-2 text-gray-600">
+          <li>Understand the client's needs or niche.</li>
+          <li>Design responsive UI & build with Tailwind CSS.</li>
+          <li>Test across devices, document, and deliver a zip package.</li>
+        </ol>
+
+        <div class="mt-6">
+          <a href="contact.html" class="bg-primary text-white px-5 py-3 rounded-md">Get in touch</a>
+        </div>
+      </div>
+
+      <aside class="bg-white p-6 rounded-lg shadow fade-in-up">
+        <h4 class="font-semibold">Quick facts</h4>
+        <ul class="mt-3 text-gray-600 space-y-2">
+          <li>📍 Location: India</li>
+          <li>📧 Email: <a href="mailto:saalikwaseem8@gmail.com" class="text-primary">saalikwaseem8@gmail.com</a></li>
+          <li>📞 Phone: <a href="tel:9942104752" class="text-primary">9942104752</a></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="border-t py-6 text-center text-sm text-gray-500">© 2025 Saalik Waseem</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- ========================= services.html ========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — Saalik Waseem | #8thDimension</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5e9', accent: '#7c3aed' } } } };</script>
+  <style>@keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } } .fade-in-up { animation: fadeInUp 0.7s ease forwards; }</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header (copy from index) -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="p-2 rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold">SW</div>
+          <div>
+            <div class="text-lg font-semibold">Saalik Waseem</div>
+            <div class="text-xs text-gray-500">Professional — Contact & Services</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="hover:text-primary transition">Home</a>
+          <a href="about.html" class="hover:text-primary transition">About</a>
+          <a href="services.html" class="hover:text-primary transition">Services</a>
+          <a href="contact.html" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="mobileBtn3" aria-label="Open menu" class="p-2 rounded-md bg-gray-100">Menu</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <h1 class="text-3xl font-bold">Services</h1>
+    <p class="text-gray-600 mt-2">Choose a service that fits your needs. All packages can be customized.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="font-semibold text-lg">Starter Template</h3>
+        <p class="text-gray-600 mt-2">A simple, ready-to-use multi-page template for small businesses or portfolios.</p>
+        <div class="mt-4">
+          <span class="text-xl font-bold">₹699</span>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="font-semibold text-lg">Custom Website</h3>
+        <p class="text-gray-600 mt-2">Full custom website built to your spec with revisions and support.</p>
+        <div class="mt-4">
+          <span class="text-xl font-bold">From ₹2,499</span>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="font-semibold text-lg">Template + Support</h3>
+        <p class="text-gray-600 mt-2">Buy a template and get 7 days of support for setup and edits.</p>
+        <div class="mt-4">
+          <span class="text-xl font-bold">₹999</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg">
+      <h4 class="font-semibold">Want a custom quote?</h4>
+      <p class="text-gray-600 mt-2">Send a message via the contact page and include your requirements.</p>
+      <div class="mt-4">
+        <a href="contact.html" class="bg-primary text-white px-5 py-3 rounded-md">Contact</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t py-6 text-center text-sm text-gray-500">© 2025 Saalik Waseem</footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- ========================= contact.html ========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Saalik Waseem | #8thDimension</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#0ea5e9', accent: '#7c3aed' } } } };</script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header (same as others) -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="p-2 rounded-lg bg-gradient-to-br from-primary to-accent text-white font-bold">SW</div>
+          <div>
+            <div class="text-lg font-semibold">Saalik Waseem</div>
+            <div class="text-xs text-gray-500">Professional — Contact & Services</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="hover:text-primary transition">Home</a>
+          <a href="about.html" class="hover:text-primary transition">About</a>
+          <a href="services.html" class="hover:text-primary transition">Services</a>
+          <a href="contact.html" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="mobileBtn4" aria-label="Open menu" class="p-2 rounded-md bg-gray-100">Menu</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <h1 class="text-3xl font-bold">Contact Me</h1>
+    <p class="text-gray-600 mt-2">Use the form below or reach me directly at the email or phone number provided.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <!-- Contact form -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <form id="contactForm" class="space-y-4">
+          <!-- Name -->
+          <div>
+            <label class="block text-sm font-medium">Your name</label>
+            <input type="text" id="name" placeholder="Your full name" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-1 focus:ring-primary/30" />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="block text-sm font-medium">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-1 focus:ring-primary/30" />
+          </div>
+
+          <!-- Phone (optional) -->
+          <div>
+            <label class="block text-sm font-medium">Phone (optional)</label>
+            <input type="tel" id="phone" placeholder="0000000000" class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-1 focus:ring-primary/30" />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="block text-sm font-medium">Message</label>
+            <textarea id="message" rows="5" placeholder="How can I help?" required class="mt-1 block w-full rounded-md border-gray-200 shadow-sm focus:border-primary focus:ring-1 focus:ring-primary/30"></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div>
+            <button type="submit" class="bg-accent text-white px-5 py-3 rounded-md">Send message</button>
+          </div>
+
+          <p id="formMsg" class="text-sm text-green-600 hidden">Your message is being composed in your email app.</p>
+        </form>
+      </div>
+
+      <!-- Contact details -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="font-semibold">Contact details</h3>
+        <p class="text-gray-600 mt-2">Email: <a href="mailto:saalikwaseem8@gmail.com" class="text-primary">saalikwaseem8@gmail.com</a></p>
+        <p class="text-gray-600">Phone: <a href="tel:9942104752" class="text-primary">9942104752</a></p>
+
+        <div class="mt-6">
+          <h4 class="font-semibold">How messages are sent</h4>
+          <p class="text-gray-600 mt-2 text-sm">This demo uses your email client (mailto) to create the message automatically. If you need a production contact form that stores or emails messages automatically, I can guide you to set up Formspree / Netlify Forms / a small backend.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t py-6 text-center text-sm text-gray-500">© 2025 Saalik Waseem</footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
